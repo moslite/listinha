@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import '../main.dart';
+import 'package:listinha/src/home/home_page.dart';
 
 part 'shared/themes/themes.dart';
 part 'shared/themes/color_schemes.g.dart';
@@ -15,9 +14,9 @@ class AppWidget extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       themeMode: ThemeMode.light,
-      theme: _lightTheme,
-      darkTheme: _darkTheme,
-      home: const MyHomePage(title: 'LISTINHA'),
+      theme: lightTheme,
+      darkTheme: darkTheme,
+      home: const HomePage(),
     );
   }
 }
