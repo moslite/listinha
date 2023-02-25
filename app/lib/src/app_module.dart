@@ -10,10 +10,8 @@ class AppModule extends Module {
   @override
   List<Bind<Object>> get binds => [
         Bind.instance<Realm>(Realm(config)),
-        Bind.factory<ConfigurationService>(
-          (i) => ConfigurationServiceImpl(i()),
-        ),
-        Bind.singleton((i) => AppStore(i())),
+        Bind.singleton((i) => AppStore()),
+        Bind.singleton((i) => ConfigurationServiceImpl(i(), i())),
       ];
 
   @override
